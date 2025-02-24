@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMC</title>
+  </head>
+  <body>
+    <header>
+      <h1>Índice de Massa Corporal</h1>
+    </header>
+    Peso: <input type="number" id="pes">
+    Altura: <input type="number" id="alt">
+    <p><input type="button" value="Calcular IMC" onclick="calcular()"></p>
+    <p id="res"></p>
+  </body>
+</html>
+<script>
+    function calcular(){
+    let pes = document.getElementById('pes')
+    let alt = document.getElementById('alt')
+    let res = document.getElementById('res')
+    let peso = Number(pes.value)
+    let altr = Number(alt.value)
+
+    if (pes.value.length == 0 || alt.value.length == 0){
+        alert('[ERRO] Digite seu peso e sua altura')
+    } else {
+        res.innerHTML = null
+        var imc = peso / (altr * altr)
+        res.innerHTML += `<p>Seu IMC é ${imc.toFixed(2)}</p>`
+        document.body.appendChild(res)
+
+    } if (imc >= 18.5 && imc <= 24.9) {
+        res.innerHTML += '<p>Saudável</p>'
+    } else if (imc >= 25 && imc <= 29.5) {
+        res.innerHTML += '<p>Sobrepeso</p>'
+    } else if (imc >= 30) {
+    res.innerHTML +='<p>Obeso</p>'
+    }
+}
+</script>
