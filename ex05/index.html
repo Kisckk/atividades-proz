@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="res">
+
+    </div>
+</body>
+</html>
+<script>
+    let n1 = prompt('Digite o Primeiro número')
+    let op = prompt('Digite a operação matemática "+, -, x, xx(potência) e /"')
+    let n2 = prompt('Digite o segundo número')
+    let res = document.getElementById('res')
+    let num1 = Number(n1)
+    let num2 = Number(n2)
+    if (n1.length == 0 || n2.length == 0){
+    res.innerHTML = '[ERRO] Atualize a página e tente de novo!'
+    } else {
+    switch (op) {
+        case '+':
+            res.innerHTML = `${num1} + ${num2} = ${num1 + num2}`
+            break
+        case '-':
+            res.innerHTML = `${num1} - ${num2} = ${num1 - num2}`
+            break
+        case 'x':
+            res.innerHTML = `${num1} x ${num2} = ${num1 * num2}`
+            break
+        case 'xx':
+            res.innerHTML = `${num1} xx ${num2} = ${num1 ** num2}`
+            break
+        case '/':
+            res.innerHTML = `${num1} / ${num2} = ${num1 / num2}`
+            default:
+            res.innerHTML = '[ERRO] Digite uma operação válida'
+
+    }
+}
+</script>
