@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <h1>Média das Notas</h1>
+    Prova 1: <input type="number" id="p1">
+    Prova 2: <input type="number" id="p2"><br><br>
+    <input type="button" value="Somar média" onclick="somar()">
+    <div id="res">
+
+    </div>
+</body>
+</html>
+<script>
+    function somar() {
+        let p1 = document.getElementById('p1')
+        let p2 = document.getElementById('p2')
+        let res = document.getElementById('res')
+        res.innerHTML = null
+        if (p1.value.length == 0 || p2.value.length == 0) {
+            alert('[ERRO] Digite a nota das duas provas')
+        } else {
+            let prova1 = Number(p1.value)
+            let prova2 = Number(p2.value)
+            var media = (prova1 + prova2) / 2
+            res.innerHTML += `<p>A média deste  aluno foi ${media}</p>`
+        } if(media <= 4.5) {
+            res.innerHTML += '<p>REPROVADO!</p>'
+        } else if (media >= 5 && media <= 6.5){
+            res.innerHTML += '<p>RECUPERAÇÃO!</p>'
+        } else if (media >= 6 && media <= 10) {
+            res.innerHTML += '<p>APROVADO!</p>'
+        } else {
+            alert('[ERRO] Esta nota não existe')
+        }
+    }
+</script>
