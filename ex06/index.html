@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci</title>
+  </head>
+  <body>
+    <h1>Fibonacci</h1>
+    Quantidade de números: <input type="number" id="num" />
+    <input type="button" value="Somar" onclick="somar()" />
+    <div id="res"></div>
+  </body>
+</html>
+<script>
+  function somar() {
+    let num = document.getElementById("num");
+    let res = document.getElementById("res");
+    let n2 = 1;
+    if (num.value.length == 0) {
+      alert("[ERRO] insira um número");
+    } else {
+        let n = Number(num.value);
+        res.innerHTML = null
+      for (let f = 0; n2 <= n; f + n2) {
+        res.innerHTML += `${f} + ${n2} = ${f + n2}<br>`;
+       f = f + n2
+       n2++ 
+      }
+    }
+  }
+</script>
