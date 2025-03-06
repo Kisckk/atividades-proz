@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    Número: <input type="number" id="num">
+    <input type="button" value="Calcular" onclick="calcular()"><br><br>
+    <select name="tabuada" id="tab" size="10">
+
+    </select>
+</body>
+</html>
+<script>
+    function calcular(){
+        let num = document.getElementById('num')
+        let n = Number(num.value)
+        let tab = document.getElementById('tab')
+        tab.textContent = null
+        if (num.value.length == 0) {
+            alert('[ERRO] Digite um número')
+        } else {
+            for(let div = 1; div <= 10; div++){
+               var txttab = document.createElement('Option')
+               txttab.textContent = `${n} x ${div} = ${n*div}`
+               tab.appendChild(txttab)
+            }
+        }
+    }
+</script>
