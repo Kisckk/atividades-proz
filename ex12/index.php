@@ -130,7 +130,32 @@
               }
           });
         </script>
-      </ol>
+        <li><strong>Tipos de IA</strong></li>
+        
+          <li>Generativa</li>
+          <div>Ela cria imagens, vídeos, textos utilizando como base padrões aprendidos pelo usuário.</div>
+
+          <li>Large Language Models</li>
+          <div>São modelos de linguagem em larga escala que entendem e produzem textos de forma coerente, respondendo perguntas, explicando conceitos, traduzindo ou até interagindo em diálogos.</div>
+
+          <li>Visão Computacional</li>
+          <div>A visão computacional é uma área da IA focada em fazer com que máquinas “enxerguem” e interpretem o mundo visual.</div>
+
+          <li><strong>Bibliotecas em Python para IA</strong></li>
+          <li>Keras</li>
+          <div>É usada quando você precisa criar redes neurais de forma rápida e simples, ideal para protótipos de IA como reconhecimento de imagens ou análise de texto.</div>
+          <li>PyTorch</li>
+          <div>É indicada para pesquisas e projetos avançados de Deep Learning, quando você precisa de flexibilidade para criar arquiteturas complexas como Transformers ou GANs.</div>
+          <li>Scikit-Learn</li>
+          <div>É a escolha certa quando o projeto envolve algoritmos de Machine Learning tradicional, como regressão, classificação ou clusterização em dados tabulares.</div>
+
+          <li><strong>Bibliotecas</strong></li>
+          <li>OpenCV</li>
+          <div>É uma biblioteca de visão computacional muito usada em projetos de processamento de imagens e vídeos. Com ela, é possível detectar bordas, reconhecer faces, aplicar filtros, identificar objetos e trabalhar com análise de movimento. O objetivo é fornecer ferramentas para que computadores entendam e interpretem imagens e vídeos.</div>
+          <li>YOLO (You Only Look Once)</li>
+          <div>É um modelo/algoritmo de detecção de objetos em tempo real. Ele analisa a imagem de uma só vez (por isso o nome “You Only Look Once”) e consegue identificar e localizar objetos com alta velocidade e precisão. O objetivo é reconhecer vários objetos ao mesmo tempo em uma cena, como pessoas, carros, animais etc. É muito usado em câmeras de segurança, veículos autônomos e sistemas de monitoramento.</div>
+          <li>MediaPipe</li>
+          <div>É uma biblioteca do Google voltada para processamento multimídia em tempo real. Ela já traz modelos prontos para tarefas como detecção de mãos, reconhecimento de gestos, rastreamento de rosto, pose corporal e até segmentação de imagens. O objetivo é facilitar o desenvolvimento de aplicações interativas de visão computacional e realidade aumentada, sem precisar treinar modelos do zero.</div>
     </article>
   </body>
 </html>
